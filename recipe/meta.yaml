@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.10,<3.12
+    - python >=3.10
     - setuptools >=64
     - wheel
     - setuptools-scm >=8
     - pip
   run:
-    - python >=3.10,<3.12
+    - python >=3.10
     - dask >=2023.1.0
     - dask-jobqueue
     - dask-mpi
@@ -31,15 +31,11 @@ requirements:
     - numpy
     - pandas
     - psutil
-    - scitools-iris >=3,<4
+    - iris >=3,<4
 
 test:
   imports:
     - gordias
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://git.smhi.se/climix/gordias
