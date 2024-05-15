@@ -28,7 +28,7 @@ requirements:
     - dask-mpi
     - distributed >=2023.1.0
     - netcdf4
-    - numpy
+    - numpy <2
     - pandas
     - psutil
     - iris >=3,<4
