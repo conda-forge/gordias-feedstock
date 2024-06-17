@@ -148,6 +148,3 @@ Feedstock Maintainers
 * [@ljoakim](https://github.com/ljoakim/)
 * [@nCarolina](https://github.com/nCarolina/)
 
-
-<!-- dummy commit to enable rerendering -->
-
