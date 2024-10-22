@@ -1,5 +1,5 @@
 {% set name = "gordias" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gordias-{{ version }}.tar.gz
-  sha256: b8a4348a243fdccac68793557515c82812d85ade9200867c9d7973fd4557bea0
+  sha256: f663262f37032aa2fc3b7b4259fc89436ffbbf1d526189974cf74c42ce890ed2
 
 build:
   noarch: python
