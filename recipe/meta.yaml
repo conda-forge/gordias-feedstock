@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "gordias" %}
 {% set version = "0.3.0" %}
 
@@ -6,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gordias-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gordias-{{ version }}.tar.gz
   sha256: f663262f37032aa2fc3b7b4259fc89436ffbbf1d526189974cf74c42ce890ed2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=64
     - wheel
     - setuptools-scm >=8
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - cftime
     - cf-units
     - dask >=2023.1.0
@@ -37,6 +38,8 @@ requirements:
     - iris >=3,<4
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - gordias
 
