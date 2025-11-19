@@ -32,7 +32,7 @@ requirements:
     - distributed >=2023.1.0
     - isodate
     - netcdf4
-    - numpy <2
+    - numpy
     - pandas
     - psutil
     - iris >=3,<4
